@@ -1,7 +1,94 @@
-body {
-  background-color: #ededf6;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #ededf6;
+  color: #31343d;
+}
+
+/* Header Section */
 header {
-  background-color: #5b6c88;
+  display: flex;
+  background-color: #31343d;
+  height: 10vh;
+  padding: 10px 20px 10px 0px;
+}
+
+header .brand {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  background-color: #92cbcd;
+  width: 40%;
+  height: 100%;
+  padding-right: 1%;
+}
+
+header .brand h1 {
+  font-size: 2em;
+  margin-left: auto;
+}
+
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  width: 40%;
+  margin-left: auto;
+}
+
+header nav a {
+  color: #92cbcd;
+  margin: 5px;
+}
+
+
+/* Hero */
+figure {
+  background-image: url("./assets/images/02-hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 25vh;
+  position: relative;
+}
+
+figure .subtitle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #92cbcd;
+  width: 30%;
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  padding: 1%;
+}
+
+figure .subtitle h1 {
+  font-size: 2em;
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    flex-direction: column;
+  }
+
+  header .brand,
+  header nav {
+    width: 100vw;
+  }
+
+  header .brand h1 {
+    margin: 0 auto;
+  }
+
+  figure .subtitle {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
